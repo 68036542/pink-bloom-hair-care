@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pink Bloom Hair Care | ร้านแชมพูออนไลน์</title>
+<style>
+:root{--pink:#ec6e9d;--pink-dark:#d94f83;--pink-light:#fff0f6;--ink:#49313d;--muted:#866f7b;--line:#f4d8e3;--white:#fff;--green:#2c8b68}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fffafd}
+header{background:linear-gradient(120deg,#ffe3ee,#fff3f8);padding:22px max(5vw,20px) 30px;border-bottom:1px solid var(--line)}
+nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-weight:900;font-size:1.25rem;color:var(--pink-dark);letter-spacing:.2px}.logo span{color:var(--ink)}
+.cart-pill{border:0;background:#fff;color:var(--pink-dark);padding:11px 16px;border-radius:99px;font-weight:800;cursor:pointer;box-shadow:0 4px 15px #d94f831c}
+.hero{max-width:1100px;margin:42px auto 10px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:24px}
+.eyebrow{color:var(--pink-dark);font-weight:800;letter-spacing:1px;font-size:.8rem}
+h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.12;margin:12px 0;color:#593347}
+.hero p{color:var(--muted);font-size:1.05rem;line-height:1.8;max-width:560px}
+.hero-art{min-height:230px;border-radius:32px;background:radial-gradient(circle at 70% 25%,#fff 0 9%,transparent 10%),linear-gradient(145deg,#f7a9c6,#fbd7e5 55%,#ffeef5);display:grid;place-items:center;font-size:7rem;box-shadow:inset 0 0 0 1px #ffffff8c}
+main{max-width:1100px;margin:42px auto;padding:0 20px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:18px}
+h2{margin:0;font-size:1.7rem}.sub{color:var(--muted);margin:6px 0 0}
+.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.product{background:#fff;border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:0 8px 28px #8f46621a}
+.product-art{height:190px;border-radius:18px;background:linear-gradient(145deg,#fff0f6,#fbd4e3);display:grid;place-items:center;font-size:5rem}
+.product:nth-child(2) .product-art{background:linear-gradient(145deg,#fff5e9,#f9d9c8)}
+.tag{display:inline-block;margin-top:15px;padding:5px 10px;background:var(--pink-light);color:var(--pink-dark);border-radius:99px;font-size:.75rem;font-weight:800}
+.product h3{margin:10px 0 5px}.product p{color:var(--muted);line-height:1.6;margin:0 0 12px}
+.product-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px}.price{font-weight:900;font-size:1.2rem;color:var(--pink-dark)}
+button{font:inherit}.add,.primary{background:var(--pink);color:white;border:0;border-radius:12px;padding:11px 16px;font-weight:800;cursor:pointer}.add:hover,.primary:hover{background:var(--pink-dark)}
+.panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;margin-top:28px}
+.panel h2{font-size:1.35rem;margin-bottom:14px}
+.cart-empty{color:var(--muted)}.cart-row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #f8e7ee}
+.qty{display:flex;align-items:center;gap:8px}.qty button{border:1px solid var(--line);background:#fff;border-radius:8px;width:28px;height:28px;cursor:pointer}
+.total{font-size:1.2rem;font-weight:900;text-align:right;margin:16px 0}
+form{display:grid;grid-template-columns:1fr 1fr;gap:12px}label{font-size:.9rem;font-weight:700}input,textarea{width:100%;padding:12px;border:1px solid #e8cbd7;border-radius:11px;margin-top:6px;font:inherit;background:#fff}
+textarea{min-height:85px;resize:vertical}.full{grid-column:1/-1}.hint{font-size:.82rem;color:var(--muted);line-height:1.6}
+footer{text-align:center;padding:35px 20px;color:var(--muted);background:#fff0f6;margin-top:50px}
+.notice{padding:12px 14px;background:#eef9f3;border:1px solid #cdebdc;color:#246b50;border-radius:12px;margin-top:12px;display:none}
+@media(max-width:700px){.hero{grid-template-columns:1fr;margin-top:28px}.hero-art{min-height:150px;font-size:5rem}.products{grid-template-columns:1fr}form{grid-template-columns:1fr}.full{grid-column:auto}.section-head{align-items:start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+  <nav><div class="logo">🌸 PINK BLOOM <span>HAIR CARE</span></div><button class="cart-pill" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">🛍️ ตะกร้า <span id="cartCount">0</span> ชิ้น</button></nav>
+  <section class="hero">
+    <div><div class="eyebrow">YOUR HAIR, YOUR BLOOM ✨</div><h1>ดูแลเส้นผม<br>ให้สวยในทุกวัน</h1><p>เลือกแชมพูที่ใช่ เติมความมั่นใจให้เส้นผม ด้วยผลิตภัณฑ์ดูแลผมที่เราคัดสรรมาเพื่อคุณ</p><button class="primary" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">เลือกชมสินค้า</button></div>
+    <div class="hero-art" aria-label="ภาพประกอบผลิตภัณฑ์แชมพู">🧴🌷</div>
+  </section>
+</header>
+<main>
+  <section id="shop">
+    <div class="section-head"><div><h2>สินค้าแนะนำ</h2><p class="sub">เลือกสินค้าที่คุณชอบ แล้วเพิ่มลงตะกร้าได้เลย</p></div><span class="tag">2 PRODUCTS</span></div>
+    <div class="products" id="products"></div>
+  </section>
+  <section class="panel" id="order">
+    <h2>🛒 ตะกร้าสินค้าและข้อมูลจัดส่ง</h2>
+    <div id="cart"><p class="cart-empty">ยังไม่มีสินค้าในตะกร้า</p></div>
+    <div class="total" id="total">ยอดรวม 0 บาท</div>
+    <form id="checkout">
+      <label>ชื่อ-นามสกุล<input name="customer" required placeholder="ชื่อผู้รับสินค้า"></label>
+      <label>เบอร์โทรศัพท์<input name="phone" required inputmode="tel" placeholder="08X-XXX-XXXX"></label>
+      <label class="full">ที่อยู่จัดส่ง<textarea name="address" required placeholder="บ้านเลขที่ ถนน แขวง/ตำบล เขต/อำเภอ จังหวัด รหัสไปรษณีย์"></textarea></label>
+      <label class="full">หมายเหตุ (ถ้ามี)<input name="note" placeholder="รายละเอียดเพิ่มเติม"></label>
+      <div class="full"><button class="primary" type="submit">ยืนยันคำสั่งซื้อ</button></div>
+    </form>
+    <div class="notice" id="notice"></div>
+    <p class="hint">หมายเหตุ: เวอร์ชันเริ่มต้นนี้บันทึกคำสั่งซื้อไว้ในอุปกรณ์ที่เปิดเว็บไซต์ และสามารถดาวน์โหลด CSV ได้จากส่วนผู้ดูแลด้านล่าง ก่อนใช้งานจริงควรเชื่อม Google Sheets และระบบชำระเงิน/ขนส่งเพิ่มเติม</p>
+  </section>
+  <section class="panel">
+    <h2>🔐 ส่วนผู้ดูแลร้าน</h2>
+    <p class="hint">สำหรับเจ้าของร้าน: ดาวน์โหลดรายการคำสั่งซื้อเป็น CSV หรือพิมพ์ใบแพ็กสินค้า/ใบจ่าหน้าพัสดุของออเดอร์ล่าสุด</p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px">
+      <button class="add" onclick="downloadOrders()">ดาวน์โหลดคำสั่งซื้อ CSV</button>
+      <button class="add" onclick="printLatest()">พิมพ์ใบแพ็ก/ใบจ่าหน้าออเดอร์ล่าสุด</button>
+      <button class="add" onclick="clearOrders()">ล้างข้อมูลทดลอง</button>
+    </div>
+    <p class="hint" id="adminStatus">ยังไม่มีคำสั่งซื้อ</p>
+  </section>
+</main>
+<footer>🌸 Pink Bloom Hair Care · ขอบคุณที่เลือกดูแลเส้นผมไปกับเรา</footer>
+<script>
+const products=[
+ {sku:"PB001",name:"แชมพูสูตรลดผมขาดหลุดร่วง",desc:"แชมพูสำหรับทำความสะอาดเส้นผมและหนังศีรษะ เหมาะสำหรับการดูแลประจำวัน",price:159,stock:50,emoji:"🧴",tag:"BEST SELLER"},
+ {sku:"PB002",name:"แชมพูสูตรผมนุ่มลื่น",desc:"แชมพูสำหรับเส้นผมที่ต้องการสัมผัสนุ่มลื่น ดูเรียบสวย จัดทรงง่าย",price:189,stock:40,emoji:"🧴",tag:"HAIR CARE"}
+];
+let cart={};
+let latestOrder=null;
+const money=n=>Number(n).toLocaleString("th-TH");
+function renderProducts(){document.getElementById('products').innerHTML=products.map(p=>`<article class="product"><div class="product-art">${p.emoji}</div><span class="tag">${p.tag}</span><h3>${p.name}</h3><p>${p.desc}</p><div class="product-bottom"><span class="price">${money(p.price)} บาท</span><button class="add" onclick="addToCart('${p.sku}')">+ เพิ่มลงตะกร้า</button></div><p class="hint">รหัสสินค้า: ${p.sku} · คงเหลือเริ่มต้น ${p.stock} ชิ้น</p></article>`).join('')}
+function addToCart(sku){cart[sku]=(cart[sku]||0)+1;renderCart()}
+function changeQty(sku,d){cart[sku]=(cart[sku]||0)+d;if(cart[sku]<=0)delete cart[sku];renderCart()}
+function renderCart(){let items=Object.entries(cart);let count=items.reduce((a,[,q])=>a+q,0);document.getElementById('cartCount').textContent=count;if(!items.length){document.getElementById('cart').innerHTML='<p class="cart-empty">ยังไม่มีสินค้าในตะกร้า</p>';document.getElementById('total').textContent='ยอดรวม 0 บาท';return}let total=0;document.getElementById('cart').innerHTML=items.map(([sku,q])=>{let p=products.find(x=>x.sku===sku);total+=p.price*q;return `<div class="cart-row"><div><b>${p.name}</b><br><span class="hint">${money(p.price)} บาท/ชิ้น</span></div><div class="qty"><button type="button" onclick="changeQty('${sku}',-1)">−</button>${q}<button type="button" onclick="changeQty('${sku}',1)">+</button></div></div>`}).join('');document.getElementById('total').textContent='ยอดรวม '+money(total)+' บาท'}
+function getOrders(){try{return JSON.parse(localStorage.getItem('pinkBloomOrders')||'[]')}catch(e){return []}}
+function saveOrders(a){localStorage.setItem('pinkBloomOrders',JSON.stringify(a))}
+document.getElementById('checkout').addEventListener('submit',e=>{e.preventDefault();if(!Object.keys(cart).length){alert('กรุณาเลือกสินค้าก่อนยืนยันคำสั่งซื้อ');return}let f=new FormData(e.target);let lines=Object.entries(cart).map(([sku,q])=>{let p=products.find(x=>x.sku===sku);return {sku,name:p.name,qty:q,price:p.price,subtotal:p.price*q}});let order={orderId:'PB'+Date.now(),createdAt:new Date().toLocaleString('th-TH'),customer:f.get('customer'),phone:f.get('phone'),address:f.get('address'),note:f.get('note'),items:lines,total:lines.reduce((a,x)=>a+x.subtotal,0),status:'รอแพ็กสินค้า'};let orders=getOrders();orders.push(order);saveOrders(orders);latestOrder=order;cart={};renderCart();e.target.reset();document.getElementById('notice').style.display='block';document.getElementById('notice').textContent='บันทึกคำสั่งซื้อทดลอง '+order.orderId+' แล้ว สามารถดาวน์โหลด CSV หรือพิมพ์ใบแพ็กได้';document.getElementById('adminStatus').textContent='มีคำสั่งซื้อทั้งหมด '+orders.length+' รายการ · ล่าสุด '+order.orderId;});
+function csvEscape(v){return '"'+String(v??'').replace(/"/g,'""')+'"'}
+function downloadOrders(){let orders=getOrders();if(!orders.length){alert('ยังไม่มีคำสั่งซื้อ');return}let rows=[['Order ID','วันที่','ชื่อลูกค้า','เบอร์โทร','ที่อยู่','SKU','สินค้า','จำนวน','ราคาต่อหน่วย','ยอดย่อย','ยอดรวม','สถานะ']];orders.forEach(o=>o.items.forEach(i=>rows.push([o.orderId,o.createdAt,o.customer,o.phone,o.address,i.sku,i.name,i.qty,i.price,i.subtotal,o.total,o.status])));let csv='\uFEFF'+rows.map(r=>r.map(csvEscape).join(',')).join('\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));a.download='pink-bloom-orders.csv';a.click();URL.revokeObjectURL(a.href)}
+function printLatest(){let orders=getOrders();let o=orders[orders.length-1];if(!o){alert('ยังไม่มีคำสั่งซื้อ');return}let w=window.open('','_blank');if(!w){alert('กรุณาอนุญาตป๊อปอัปเพื่อพิมพ์เอกสาร');return}w.document.write(`<html lang="th"><meta charset="UTF-8"><title>เอกสารคำสั่งซื้อ ${o.orderId}</title><style>body{font-family:Arial,sans-serif;padding:25px;color:#222}h2{margin-bottom:5px}.box{border:1px solid #aaa;padding:15px;margin:15px 0}table{width:100%;border-collapse:collapse}td,th{border:1px solid #aaa;padding:8px;text-align:left}.label{border:2px dashed #555;padding:18px;margin-top:24px}@media print{button{display:none}}</style><h2>Pink Bloom Hair Care</h2><p>ใบหยิบสินค้า / ใบแพ็กสินค้า · ${o.orderId}</p><div class="box"><b>ผู้รับ:</b> ${o.customer}<br><b>โทร:</b> ${o.phone}<br><b>ที่อยู่:</b> ${o.address}<br><b>หมายเหตุ:</b> ${o.note||'-'}</div><table><tr><th>SKU</th><th>สินค้า</th><th>จำนวน</th><th>ราคา</th><th>รวม</th></tr>${o.items.map(i=>`<tr><td>${i.sku}</td><td>${i.name}</td><td>${i.qty}</td><td>${i.price}</td><td>${i.subtotal}</td></tr>`).join('')}</table><h3>ยอดรวม ${money(o.total)} บาท</h3><p>สถานะ: ${o.status}</p><div class="label"><h3>ใบจ่าหน้าพัสดุ / SHIPPING LABEL</h3><b>ผู้รับ: ${o.customer}</b><p>โทร. ${o.phone}</p><p>${o.address}</p><p>เลขที่คำสั่งซื้อ: ${o.orderId}</p></div><button onclick="window.print()">พิมพ์เอกสาร</button></html>`);w.document.close()}
+function clearOrders(){if(confirm('ต้องการลบคำสั่งซื้อทดลองทั้งหมดในอุปกรณ์นี้หรือไม่?')){localStorage.removeItem('pinkBloomOrders');latestOrder=null;document.getElementById('adminStatus').textContent='ยังไม่มีคำสั่งซื้อ';document.getElementById('notice').style.display='none'}}
+renderProducts();renderCart();let existing=getOrders();if(existing.length)document.getElementById('adminStatus').textContent='มีคำสั่งซื้อทั้งหมด '+existing.length+' รายการ · ล่าสุด '+existing[existing.length-1].orderId;
+</script>
+</body></html>
